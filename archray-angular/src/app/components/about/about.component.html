@@ -1,0 +1,44 @@
+<section id="about" class="section about">
+  <div class="section-inner">
+    <div class="grid">
+      <div appReveal class="text-col">
+        <div class="gold-label">
+          <div class="gold-label-line"></div>
+          <span class="gold-label-text">About ARCHRAY</span>
+        </div>
+        <h2 class="section-title">Where Vision Meets Precision</h2>
+
+        <p class="body-text">
+          ARCHRAY ARCHITECTS is a multidisciplinary architecture and engineering consultancy
+          headquartered in Abu Dhabi. We deliver innovative, functional, and sustainable spaces
+          across the UAE and the wider GCC region.
+        </p>
+        <p class="body-text light">
+          Our work spans residential villas, commercial towers, urban masterplans, and interior
+          fit-outs — always guided by a commitment to technical excellence and design integrity.
+          Every project is a collaboration between our team's deep expertise and our clients' vision.
+        </p>
+        <p class="body-ar">
+          أرشراي للعمارة والاستشارات الهندسية — شركة متعددة التخصصات تقدم حلولاً معمارية وهندسية
+          مبتكرة ومستدامة في جميع أنحاء الإمارات ومنطقة الخليج العربي.
+        </p>
+
+        <div class="tags">
+          @for (tag of tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+
+      <div appReveal class="values-grid">
+        @for (v of values; track v.title) {
+          <div class="value-card">
+            <div class="value-icon">{{ v.icon }}</div>
+            <div class="value-title">{{ v.title }}</div>
+            <div class="value-desc">{{ v.desc }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

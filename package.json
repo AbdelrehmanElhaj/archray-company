@@ -2,7 +2,7 @@
   "name": "archray-company",
   "private": true,
   "scripts": {
-    "build": "cd archray_v3_final && npm install && npm run build",
+    "build": "cd archray-angular && npm install && npm run build",
     "deploy": "npm run build && npx wrangler deploy"
   }
 }

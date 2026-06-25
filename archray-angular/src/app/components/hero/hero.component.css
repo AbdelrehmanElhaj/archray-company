@@ -1,0 +1,222 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 28% 45%, #162E50 0%, #091B30 68%);
+  padding: 100px 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.022;
+  background-image:
+    linear-gradient(#D4AF37 1px, transparent 1px),
+    linear-gradient(90deg, #D4AF37 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.ghost-a {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.032;
+  pointer-events: none;
+  width: 560px;
+  height: 572px;
+  animation: float-a 6s ease-in-out infinite;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 780px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 50px;
+  padding: 5px 18px;
+  margin-bottom: 48px;
+}
+
+.badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.badge-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.hero-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14.4px;
+}
+
+.hero-logo-text { text-align: center; line-height: 1; }
+
+.hero-logo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 27px;
+  letter-spacing: 4.95px;
+  color: white;
+}
+
+.gold { color: var(--gold); }
+
+.hero-logo-tagline {
+  display: flex;
+  align-items: center;
+  gap: 6.3px;
+  justify-content: center;
+  margin-top: 3.6px;
+}
+
+.hero-logo-tagline span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10.35px;
+  letter-spacing: 2.52px;
+  color: rgba(255, 255, 255, 0.42);
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 19.8px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.hero-logo-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 7.92px;
+  letter-spacing: 0.9px;
+  color: rgba(255, 255, 255, 0.42);
+  text-transform: uppercase;
+  margin-top: 5.4px;
+  opacity: 0.75;
+}
+
+.hero-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 64px);
+  color: white;
+  line-height: 1.12;
+  margin: 48px auto 0;
+  max-width: 680px;
+  letter-spacing: -0.5px;
+}
+
+.hero-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.46);
+  line-height: 1.85;
+  margin: 24px auto 0;
+  max-width: 520px;
+}
+
+.hero-ar {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.22);
+  direction: rtl;
+  margin-top: 10px;
+}
+
+.hero-ctas {
+  margin-top: 52px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--navy);
+  cursor: pointer;
+  transition: opacity 0.15s;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  color: var(--gold);
+}
+
+.scroll-hint {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+}
+
+.scroll-hint-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7.5px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+.scroll-hint-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(var(--gold), transparent);
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 80px 24px 60px; }
+  .badge-text { font-size: 7px; }
+}

@@ -1,0 +1,38 @@
+<nav class="navbar">
+  <button class="logo-btn" (click)="scrollTo('home')">
+    <app-archray-icon [size]="22" [onDark]="true" />
+    <div>
+      <div class="logo-name">ARCH<span class="gold">RAY</span></div>
+      <div class="logo-sub">ARCHITECTS</div>
+    </div>
+  </button>
+
+  <div class="nav-links">
+    @for (item of navItems; track item.id) {
+      <button
+        class="nav-btn"
+        [class.active]="scroll.activeSection() === item.id"
+        (click)="scrollTo(item.id)">
+        {{ item.label }}
+      </button>
+    }
+    <button class="nav-cta" (click)="scrollTo('contact')">GET IN TOUCH</button>
+  </div>
+
+  <button class="hamburger" (click)="menuOpen = !menuOpen" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+@if (menuOpen) {
+  <div class="mobile-menu">
+    @for (item of navItems; track item.id) {
+      <button
+        [class.active]="scroll.activeSection() === item.id"
+        (click)="scrollTo(item.id)">
+        {{ item.label }}
+      </button>
+    }
+    <button class="mobile-cta" (click)="scrollTo('contact')">GET IN TOUCH</button>
+  </div>
+}

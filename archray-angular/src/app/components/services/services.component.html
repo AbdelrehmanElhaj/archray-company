@@ -1,0 +1,29 @@
+<section id="services" class="section services">
+  <div class="section-inner">
+    <div appReveal class="header">
+      <div class="gold-label">
+        <div class="gold-label-line"></div>
+        <span class="gold-label-text">Our Services</span>
+      </div>
+      <h2 class="section-title">What We Offer</h2>
+      <p class="header-sub">
+        From concept to completion, we deliver end-to-end architectural and engineering
+        services across every typology.
+      </p>
+    </div>
+
+    <div appReveal class="cards-grid">
+      @for (svc of services; track svc.title) {
+        <div class="service-card">
+          <div class="svc-icon">{{ svc.icon }}</div>
+          <div class="svc-title">{{ svc.title }}</div>
+          <div class="svc-desc">{{ svc.desc }}</div>
+          <div class="learn-more">
+            <span>LEARN MORE</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

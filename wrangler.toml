@@ -2,4 +2,4 @@ name = "archray-company"
 compatibility_date = "2024-09-23"
 
 [assets]
-directory = "./archray_v3_final/dist"
+directory = "./archray-angular/dist/archray-company/browser"

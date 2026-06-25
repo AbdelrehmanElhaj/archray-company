@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="brand-col">
+        <div class="brand-logo">
+          <app-archray-icon [size]="46" [onDark]="true" />
+          <div class="brand-text">
+            <div class="brand-name">ARCH<span class="gold">RAY</span></div>
+            <div class="brand-tagline">
+              <div class="divider"></div>
+              <span>ARCHITECTS</span>
+              <div class="divider"></div>
+            </div>
+            <div class="brand-sub">WHERE VISION MEETS PRECISION</div>
+          </div>
+        </div>
+        <p class="brand-desc">
+          A multidisciplinary architecture and engineering consultancy.
+          Creating spaces that inspire and endure.
+        </p>
+        <p class="brand-desc-ar">أرشراي للعمارة والاستشارات الهندسية</p>
+      </div>
+
+      <div class="col">
+        <div class="col-heading">SERVICES</div>
+        @for (s of serviceLinks; track s) {
+          <div class="col-link">{{ s }}</div>
+        }
+      </div>
+
+      <div class="col">
+        <div class="col-heading">COMPANY</div>
+        @for (s of companyLinks; track s) {
+          <div class="col-link">{{ s }}</div>
+        }
+      </div>
+
+      <div class="col">
+        <div class="col-heading">CONTACT</div>
+        @for (item of contactInfo; track item.text) {
+          <div class="footer-contact-row">
+            <span class="footer-contact-icon">{{ item.icon }}</span>
+            <span class="footer-contact-text">{{ item.text }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="bottom-brand">
+        <app-archray-icon [size]="16" [onDark]="true" />
+        <span class="bottom-name">ARCHRAY</span>
+        <span class="bottom-sub">ARCHITECTS</span>
+      </div>
+      <div class="bottom-copy">
+        © 2026 ARCHRAY ARCHITECTS · Abu Dhabi, UAE · All Rights Reserved
+      </div>
+      <div class="bottom-ar">حقوق الملكية محفوظة · أرشراي للعمارة</div>
+    </div>
+  </div>
+</footer>

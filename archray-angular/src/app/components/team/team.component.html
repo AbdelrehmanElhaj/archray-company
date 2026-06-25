@@ -1,0 +1,35 @@
+<section id="team" class="section team">
+  <div class="section-inner">
+    <div appReveal class="header">
+      <div class="gold-label">
+        <div class="gold-label-line"></div>
+        <span class="gold-label-text">Our Team</span>
+      </div>
+      <h2 class="section-title">The Minds Behind ARCHRAY</h2>
+      <p class="header-sub">
+        A team of passionate architects, engineers, and designers united by a shared commitment to excellence.
+      </p>
+    </div>
+
+    <div appReveal class="members-grid">
+      @for (m of members; track m.name) {
+        <div class="member">
+          <div class="avatar">{{ m.initials }}</div>
+          <div class="member-name">{{ m.name }}</div>
+          <div class="member-name-ar">{{ m.nameAr }}</div>
+          <div class="member-role">{{ m.role }}</div>
+          <div class="member-role-ar">{{ m.roleAr }}</div>
+        </div>
+      }
+    </div>
+
+    <div appReveal class="careers-cta">
+      <div class="cta-text">
+        <div class="cta-label">JOIN THE TEAM</div>
+        <div class="cta-title">We're always looking for exceptional talent.</div>
+        <div class="cta-sub">Architects, engineers, and designers who share our passion for precision.</div>
+      </div>
+      <button class="cta-btn" (click)="scrollToContact()">GET IN TOUCH</button>
+    </div>
+  </div>
+</section>

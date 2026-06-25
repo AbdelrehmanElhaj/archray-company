@@ -1,0 +1,88 @@
+.about { background: var(--navy-dark); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.body-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.body-text.light { color: rgba(255, 255, 255, 0.45); }
+
+.body-ar {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.85;
+  direction: rtl;
+  margin-bottom: 32px;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 4px;
+  padding: 5px 12px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 22px 18px;
+}
+
+.value-icon {
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.value-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.value-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 500px) {
+  .section { padding: 60px 24px; }
+  .values-grid { grid-template-columns: 1fr; }
+}

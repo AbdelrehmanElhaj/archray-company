@@ -1,0 +1,73 @@
+<section id="contact" class="section contact">
+  <div class="section-inner">
+    <div appReveal class="header">
+      <div class="gold-label">
+        <div class="gold-label-line"></div>
+        <span class="gold-label-text">Contact Us</span>
+      </div>
+      <h2 class="section-title">Start Your Project</h2>
+      <p class="header-sub">
+        Ready to transform your vision into reality? Let's talk about your project.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div appReveal class="info-col">
+        <div class="info-heading">GET IN TOUCH</div>
+        @for (item of contactInfo; track item.label) {
+          <div class="info-row">
+            <div class="info-icon-wrap">
+              <span class="info-icon">{{ item.icon }}</span>
+            </div>
+            <div>
+              <div class="info-label">{{ item.label }}</div>
+              <div class="info-value">{{ item.value }}</div>
+            </div>
+          </div>
+        }
+
+        <div class="arabic-box">
+          <div class="ar-heading">تواصل معنا</div>
+          <div class="ar-body">
+            نرحب بمشاريعك وأفكارك — فريقنا المعماري جاهز للاستماع إليك وتحويل رؤيتك إلى واقع.<br>
+            <span class="ar-email">albashir&#64;archray.ae</span>
+          </div>
+        </div>
+      </div>
+
+      <div appReveal class="form-wrap">
+        <div class="form-heading">SEND US A MESSAGE</div>
+        <form (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="row-2">
+            <div class="field">
+              <label class="field-label">FULL NAME</label>
+              <input type="text" placeholder="Your name" [(ngModel)]="form.name" name="name">
+            </div>
+            <div class="field">
+              <label class="field-label">EMAIL ADDRESS</label>
+              <input type="email" placeholder="your&#64;email.com" [(ngModel)]="form.email" name="email">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">SERVICE INTEREST</label>
+            <select [(ngModel)]="form.service" name="service">
+              <option value="">Select a service</option>
+              <option>Architecture &amp; Design</option>
+              <option>Interior Design</option>
+              <option>Engineering Consultancy</option>
+              <option>Urban Planning</option>
+              <option>Project Management</option>
+              <option>Sustainable Design</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">YOUR MESSAGE</label>
+            <textarea placeholder="Describe your project..." rows="4"
+              [(ngModel)]="form.message" name="message"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">SEND MESSAGE →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
