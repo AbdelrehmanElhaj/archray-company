@@ -2,11 +2,15 @@
   "name": "archray-company",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "deploy": "ng build && cd .. && npx wrangler deploy"
   },
   "dependencies": {
     "@angular/animations": "^17.3.0",
